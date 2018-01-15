@@ -7,3 +7,7 @@ Contains information regarding [fpcupdeluxe](https://github.com/newpascal/fpcupd
 ## GITIgnore.md
 
 GIT ignore for various project types.
+
+## GITAttributes.md
+
+GIT attributes for various project types.
