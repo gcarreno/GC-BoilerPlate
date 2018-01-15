@@ -1,6 +1,6 @@
 # Boiler Plate files for Gustavo Carreno
 
-## FPCupDeluxe.txt
+## FPCupDeluxe.md
 
 Contains information regarding [fpcupdeluxe](https://github.com/newpascal/fpcupdeluxe).
 
