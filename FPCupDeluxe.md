@@ -6,4 +6,4 @@ sudo apt install make binutils build-essential gdb git subversion zip unzip libx
 
 # Bootstrap
 
-[Bootstrap 2.6.0](ftp://ftp.freepascal.org/pub/fpc/dist/2.6.0/bootstrap)
+Bootstrap 2.6.0: ftp://ftp.freepascal.org/pub/fpc/dist/2.6.0/bootstrap
