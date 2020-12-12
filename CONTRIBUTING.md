@@ -2,7 +2,108 @@
 
 I'm very happy that anyone wants to contribute!
 
-At the moment the only guideline is for commit messages.
+## Indentation
+
+Use two `<space>`.
+
+No `<tab>` please.
+
+## Assignment
+
+No `<space>` before `:=` and one after.
+
+Example
+```pascal
+var
+  Name: String;
+begin
+  Name:= 'My Name';
+end.
+```
+
+## Constant assignment
+
+One `<space>` before `=` and one after.
+
+Example
+```pascal
+const
+  cName = 'My Name';
+```
+
+## Comparison
+
+One `<space>` before `=` and one after.
+
+Example
+```pascal
+var
+  index: Integer;
+begin
+  if index = 1 then
+  begin
+    // Do something
+  end;
+end.
+```
+
+## `begin..end` blocks
+
+All `if`, `for`, etc... will have a `begin..end` block.
+
+No one liners please.
+
+Example
+```pascal
+begin
+  if FValue = aValue then
+  begin
+    exit;
+  end;
+end.
+```
+
+## Uses clause format
+
+- No trailing commas
+- Indent first unit by two `<space>`
+- Subsequent unit are preceded by a comma and a `<space>`
+- Separate the system units from the project units with a blank line
+- Finish with a line containing the  `;`
+
+Example
+```pascal
+uses
+  Unit1
+, Unit2
+, Unit3
+
+, Name.Space.Unit2
+;
+```
+
+## Classes interface declaration
+
+Always include `TObject` in the `class()`.
+
+Always include `private`, `protected`, `public` and `published` even if there is nothing to declare.
+
+Property's `read` and `write` are indented by two `<space>`.
+
+Example
+```pascal
+type
+  TSomeClass = class(TObject)
+  private
+    FName: String;
+  protected
+  public
+    property Name: String
+      read FName
+      write FName;
+  published
+  end;
+```
 
 ## Commit Messages
 
@@ -10,8 +111,9 @@ At the moment the only guideline is for commit messages.
 
 ### Message Structure
 
-A commit messages consists of three distinct parts separated by a blank line: the title, an optional body and an optional footer. The layout looks like this:
+A commit messages consists of three distinct parts separated by a blank line: the title, an optional body and an optional footer.
 
+The layout looks like this:
 ```
 type: subject
 
@@ -52,7 +154,7 @@ The footer is optional and is used to reference issue tracker IDs.
 ### Example Commit Message
 
 ```
-feat: Summarize changes in around 50 characters or less
+feat: Summarise changes in around 50 characters or less
 
 More detailed explanatory text, if necessary. Wrap it to about 72
 characters or so. In some contexts, the first line is treated as the
@@ -63,7 +165,7 @@ and `rebase` can get confused if you run the two together.
 
 Explain the problem that this commit is solving. Focus on why you
 are making this change as opposed to how (the code explains that).
-Are there side effects or other unintuitive consequenses of this
+Are there side effects or other non intuitive consequences of this
 change? Here's the place to explain them.
 
 Further paragraphs come after blank lines.
