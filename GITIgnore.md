@@ -10,6 +10,9 @@
 # GhostWriter backup files
 *.backup
 
+# nano editor swp files
+*.swp
+
 # Uncomment these types if you want even more clean repository. But be careful.
 # It can make harm to an existing project source. Read explanations below.
 #
