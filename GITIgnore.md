@@ -28,7 +28,6 @@
 *.drc
 *.map
 *.dres
-*.res
 *.rsm
 *.tds
 *.dcu
