@@ -4,6 +4,10 @@
 
 Contributing guidelines.
 
+## LazForms.md
+
+- [InitShortCuts](LazForms.md#initshortcuts)
+
 ## FPCupDeluxe.md
 
 Contains information regarding [fpcupdeluxe](https://github.com/newpascal/fpcupdeluxe).
