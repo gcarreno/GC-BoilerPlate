@@ -1,6 +1,6 @@
 # Lazarus
 
-```
+```gitignore
 #  project specific
 /bin
 
