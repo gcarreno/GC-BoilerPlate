@@ -1,6 +1,6 @@
 # Packages
 
-```bash
+```console
 $ sudo apt install \
 	make \
 	binutils \
