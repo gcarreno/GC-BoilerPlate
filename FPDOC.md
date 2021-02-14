@@ -2,7 +2,7 @@
 
 Script: `updateXML`
 
-```shell
+```bash
 #!/bin/bash
 
 MAKESKEL=~/FreePascal/fpc/bin/x86_64-linux/makeskel
@@ -30,7 +30,7 @@ done
 
 Script `buildDocs`
 
-```shell
+```bash
 #!/bin/bash
 
 FPDOC=~/FreePascal/fpc/bin/x86_64-linux/fpdoc
