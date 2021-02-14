@@ -1,6 +1,6 @@
 # Lazarus
 
-```
+```gitattributes
 # Set the default behavior, in case people don't have core.autocrlf set.
 * text=auto
 
