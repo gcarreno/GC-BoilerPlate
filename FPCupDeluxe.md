@@ -1,7 +1,7 @@
 # Packages
 
-```shell
-sudo apt install \
+```bash
+$ sudo apt install \
 	make \
 	binutils \
 	build-essential \
