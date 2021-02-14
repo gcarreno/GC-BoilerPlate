@@ -35,7 +35,7 @@
 *.tds
 *.dcu
 *.lib
-*.o
+*.[oa]
 *.or
 *.ppu
 *.dbg
@@ -56,10 +56,13 @@
 __history/
 *.~*
 
-# Lazarus history, backups and session
+# Lazarus history, backups, session and others
 backup/
 *.bak
 *.lps
+*.rst
+*.rsj
+*.lrt
 
 # Castalia statistics file
 *.stat
