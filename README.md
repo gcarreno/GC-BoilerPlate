@@ -4,6 +4,10 @@
 
 Contributing guidelines.
 
+## CommonSyntaxHilight.md
+
+My list of syntax hilighting examples
+
 ## LazForms.md
 
 - [InitShortCuts](LazForms.md#initshortcuts)
