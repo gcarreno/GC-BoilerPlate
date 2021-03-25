@@ -15,6 +15,7 @@ My list of syntax hilighting examples
 ## LazForms.md
 
 - [InitShortCuts](LazForms.md#initshortcuts)
+- [SetPropertyStorageActive](LazForms.md#setpropertystorageactive)
 
 ## FPCupDeluxe.md
 
