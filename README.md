@@ -8,6 +8,10 @@ Contributing guidelines.
 
 My list of syntax hilighting examples
 
+## LazProgram.md
+
+- [GetApplicationName](LazProgram.md#getapplicationname)
+
 ## LazForms.md
 
 - [InitShortCuts](LazForms.md#initshortcuts)
