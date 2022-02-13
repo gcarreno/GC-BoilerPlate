@@ -11,6 +11,7 @@ $ sudo apt install \
 	zip \
 	unzip \
 	libx11-dev \
+	libatk1.0-dev \
 	libgtk2.0-dev \
 	libgdk-pixbuf2.0-dev \
 	libcairo2-dev \
