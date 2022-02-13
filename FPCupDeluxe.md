@@ -14,6 +14,7 @@ $ sudo apt install \
 	libatk1.0-dev \
 	libgtk2.0-dev \
 	libgdk-pixbuf2.0-dev \
+	libqt5pas-dev \
 	libcairo2-dev \
 	libpango1.0-dev
 ```
