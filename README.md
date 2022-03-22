@@ -32,3 +32,7 @@ GIT ignore for various project types.
 ## GITAttributes.md
 
 GIT attributes for various project types.
+
+## CakePHP.md
+
+Step to get a fucntional CakePHP app with Authentication and Authorization.
