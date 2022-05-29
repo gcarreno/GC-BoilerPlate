@@ -6,7 +6,7 @@ uses
   
 procedure InitShortCuts;
 begin
-{$IFDEF LINUX}
+{$IFDEF UNIX}
   actFileExit.ShortCut := KeyToShortCut(VK_Q, [ssCtrl]);
 {$ENDIF}
 {$IFDEF WINDOWS}
