@@ -16,17 +16,14 @@ echo ${VAR}
 ```
 
 ## Console
-\`\`\`console
-
-$ ls
+\`\`\`console  
+$ ls  
 file1 file2 file2  
 \`\`\`
 
 ```console
-
 $ ls
 file1 file2 file2
-
 ```
 
 ## GITIgnore
@@ -35,9 +32,9 @@ file1 file2 file2
 /bin  
 \`\`\`
 
-```gitignore  
-# Project specific  
-/bin  
+```gitignore
+# Project specific
+/bin
 ```
 
 ## GITAttributes
@@ -46,7 +43,7 @@ file1 file2 file2
 \* text=auto  
 \`\`\`
 
-```gitattributes  
-# Set the default behavior, in case people don't have core.autocrlf set.  
-* text=auto  
+```gitattributes
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
 ```
