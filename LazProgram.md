@@ -1,6 +1,7 @@
 # GetApplicationName
 
 ```pascal
+program MyProgram;
 uses
   {...}
   SysUtils,
@@ -8,7 +9,7 @@ uses
 
 function GetApplicationName: String;
 begin
-  Result:= 'ApplicationNane';
+  Result:= 'ApplicationName';
 end;
 
 begin
