@@ -1,5 +1,9 @@
 # Boiler Plate files for Gustavo Carreno
 
+## GitHub.md
+
+- [Badges](GitHub.md#badges)
+
 ## CONTRIBUTING.md
 
 Contributing guidelines.
