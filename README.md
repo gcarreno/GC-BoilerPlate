@@ -10,7 +10,11 @@ Contributing guidelines.
 
 ## CommonSyntaxHilight.md
 
-My list of syntax hilighting examples
+My list of syntax hilighting examples.
+
+## Snipets.md
+
+A list of useful code snippets.
 
 ## LazProgram.md
 
