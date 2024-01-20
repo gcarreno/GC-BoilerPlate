@@ -43,4 +43,8 @@ GIT attributes for various project types.
 
 ## CakePHP.md
 
-Step to get a fucntional CakePHP app with Authentication and Authorization.
+Step to get a functional `CakePHP` app with Authentication and Authorisation.
+
+## MySQL.md
+
+Some useful commands for `MySQL`.
