@@ -28,7 +28,7 @@ $ sudo systemctl enable --now libvirtd
 $ sudo systemctl start libvirtd
 ```
 
-# Adding Users `kvm` and `libvirt`
+# Adding Users to `kvm` and `libvirt`
 
 ```console
 $ sudo usermod -aG kvm $USER
