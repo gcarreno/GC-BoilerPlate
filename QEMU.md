@@ -4,7 +4,6 @@
 
 ```console
 $ egrep -c '(vmx|svm)' /proc/cpuinfo
-
 ```
 
 # Installation
