@@ -2,7 +2,7 @@
 
 These instruction are based on version 10.41.0.
 
-## Creating
+## Creating Project
 
 ```console
 $ composer create-project laravel/laravel test
@@ -31,6 +31,12 @@ $ ./artisan breeze:install
 ## With Voyager Started Pack
 
 This starter pack is based in `Vue` and `Bootstrap`.
+
+### Install `php-gd`
+
+```console
+$ sudo apt install -y php-gd
+```
 
 ### Installing Voyager
 
