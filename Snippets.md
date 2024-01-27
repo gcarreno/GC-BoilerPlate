@@ -2,7 +2,7 @@
 
 ## FPC
 
-### Time difference
+### Time Difference
 ```pas
 function FormatElapsed(const APrevious: TDateTime): String;
 // Kindly pinched, with authorisation, from KodeZwerg
@@ -21,9 +21,9 @@ begin
 end;
 ```
 
-### File size
+### File Size
 ```pas
-function FileSizeToString(const ASize: UInt64; const oneKB: Integer = {$IFDEF MSWINDOWS}1024{$ELSE}1000{$ENDIF}): string;
+function FileSizeToString(const ASize: UInt64; const oneKB: Integer = {$IFDEF MSWINDOWS}1024{$ELSE}1000{$ENDIF}): String;
 // Kindly pinched, with authorisation, from KodeZwerg
 var
   Calc: Extended;
