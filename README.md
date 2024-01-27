@@ -48,6 +48,7 @@ end;
 ### File size
 ```pas
 function FileSizeToString(const ASize: UInt64; const oneKB: Integer = {$IFDEF MSWINDOWS}1024{$ELSE}1000{$ENDIF}): string;
+// Kindly pinched, with authorisation, from KodeZwerg
 var
   Calc: Extended;
   Sign: String;
