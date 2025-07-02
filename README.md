@@ -1,5 +1,18 @@
 # Boiler Plate files for Gustavo Carreno
 
+## LazForms.md
+
+- [InitShortCuts](LazForms.md#initshortcuts)
+- [SetPropertyStorageActive](LazForms.md#setpropertystorageactive)
+
+## Go.md
+
+Some useful stuff for Go.
+
+## Cobra-Viper.md
+
+Some nice snippets for Go's `cobra` and `viper`.
+
 ## QEMU.md
 
 Instruction on how to install `QEMU` and setting it up.
@@ -20,18 +33,13 @@ Contributing guidelines.
 
 My list of syntax hilighting examples.
 
-## Snipets.md
+## Snippets.md
 
 A list of useful code snippets.
 
 ## LazProgram.md
 
 - [GetApplicationName](LazProgram.md#getapplicationname)
-
-## LazForms.md
-
-- [InitShortCuts](LazForms.md#initshortcuts)
-- [SetPropertyStorageActive](LazForms.md#setpropertystorageactive)
 
 ## FPCupDeluxe.md
 
