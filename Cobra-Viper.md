@@ -11,6 +11,8 @@
 ## Marking flags
 
 ```go
+func init() {
+	// ...
 	rootCmd.SetUsageFunc(rootUsageFunc)
 	rootCmd.MarkFlagRequired("flag")
 	rootCmd.MarkFlagDirname("flag")
@@ -18,6 +20,8 @@
 	rootCmd.MarkFlagsMutuallyExclusive("flag1", "flag1")
 	rootCmd.MarkFlagsOneRequired("flag1", "flag2", "etc...")
 	rootCmd.MarkFlagsRequiredTogether("flag1", "flag2", "etc...")
+	// ...
+}
 ```
 
 ## Custom flags validator
