@@ -5,6 +5,14 @@
 - [InitShortCuts](LazForms.md#initshortcuts)
 - [SetPropertyStorageActive](LazForms.md#setpropertystorageactive)
 
+## LazProgram.md
+
+- [GetApplicationName](LazProgram.md#getapplicationname)
+
+## LazBuildModes.md
+
+Some useful suggestions to add to build modes.
+
 ## Go.md
 
 Some useful stuff for Go.
@@ -36,10 +44,6 @@ My list of syntax hilighting examples.
 ## Snippets.md
 
 A list of useful code snippets.
-
-## LazProgram.md
-
-- [GetApplicationName](LazProgram.md#getapplicationname)
 
 ## FPCupDeluxe.md
 
