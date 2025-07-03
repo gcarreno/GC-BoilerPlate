@@ -1,4 +1,6 @@
-# GetApplicationName
+# Lazarus Program
+
+## GetApplicationName
 
 ```pascal
 program MyProgram;

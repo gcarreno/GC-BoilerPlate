@@ -1,4 +1,6 @@
-# InitShortCuts
+# Lazarus Forms
+
+## InitShortCuts
 
 ```pascal
 uses
@@ -15,14 +17,14 @@ begin
 end
 ```
 
-# Translation
+## Translation
 
 ```pascal
 uses
   {...}DefaultTranslator{...}
 ```
 
-# Status Bar Hint
+## Status Bar Hint
 
 ```pascal
 interface
@@ -47,7 +49,7 @@ begin
 end;
 ```
 
-# SetPropertyStorageActive
+## SetPropertyStorageActive
 
 ```pascal
 procedure TfrmMain.SetPropertyStorageActive;
