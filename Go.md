@@ -1,14 +1,18 @@
-# Go code
+# Go Code
 
 ## Hooking to signals
 
+
+### On the main application side
 ```go
 func main(){
     // Create a cancellable context.
     ctx, cancel := context.WithCancel(context.Background())
 
-    // Create a channel to receive OS signals.
+    // Create a channel to receive OS signals
     sigChan := make(chan os.Signal, 1)
+	// Create a channel to quit programmatically
+	quit := make(chan struct{})
 
     // Notify on all relevant Windows and Unix signals.
     signal.Notify(sigChan,
@@ -25,21 +29,98 @@ func main(){
         // syscall.SIGUSR1, // User-defined signal 1
         // syscall.SIGUSR2, // User-defined signal 2
     )
-}
 
+	var wg sync.WaitGroup
+
+	// Add one to the wait group
+	wg.Add(1)
+	// An example of a goroutine that just waits for the context to be canceled
+    go func(ctx context.Context, wg sync.WaitGroup, quit chan struct{}){
+		// Notify the wait group that one goroutine is done
+		defer wg.Done()
+		// Create a ticker with 5s interval
+		ticker := time.NewTicker(time.Second * 5)
+		defer ticker.Stop()
+
+		var counter int
+
+		// Block until we get a signal from the context
+		for {
+			select {
+			case <-ctx.Done():
+				// 
+				return
+			case <-ticker.C:
+			// Do something every 5 seconds
+			if count < 10 {
+				counter++
+			} else {
+				// Quit programmatically after 10 loops
+				close(quit)
+			}
+			default:
+				continue
+			}
+		}
+
+	}(ctx, wg, quit) // Call the anonymous function with params above
+
+	// Block here until we receive a termination signal or the quit channel closes
+	select {
+	case sig := <-sigChan:
+		// Print a new line after the "^C" or "^\" as been pressed
+		if sig == syscall.SIGINT || sig == syscall.SIGQUIT || sig == syscall.SIGKILL {
+			fmt.Println()
+		}
+		log.Debugf("received signal '%s'", sig)
+	case <-quit:
+		log.Debugf("received internal shutdown")
+	}
+
+	// Call the cancel function to notify `goroutines` that are paying attention to the context, to exit
+	cancel()
+
+	// Wait for the `goroutines` that are paying attention to the context, to exit
+	wg.Wait()
+}
+```
+
+### Inside the `goroutine`
+
+If you want to terminate the application via code just close the `quit` channel.
+
+```go
+  // Triggering an exit via code, not via `OS` signal
+  close(quit)
+```
+
+### On the `goroutine` side
+
+```go
 // On the blocking side
-func (s *StructType) Run() {
+func (s *StructType) Run(ctx context.Context, wg sync.WaitGroup, quit chan struct{}) {
+	// Notify the wait group that one goroutine is done
+	defer wg.Done()
+	// Create a ticker with 5s interval
 	ticker := time.NewTicker(time.Second * 5)
 	defer ticker.Stop()
 
+	var counter int
+
     for {
 		select {
-		case <-n.ctx.Done():
-			log.Debug("Node.Start() exiting")
+		case <-ctx.Done():
+			log.Debug("exiting")
 			return
         }
 		case <-ticker.C:
           // Do something every 5 seconds
+		  if count < 10 {
+			counter++
+		  } else {
+			// Quit programmatically after 10 loops
+			close(quit)
+		  }
  		default:
 			continue
    }

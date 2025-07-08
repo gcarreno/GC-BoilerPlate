@@ -13,7 +13,6 @@
 ```go
 func init() {
 	// ...
-	rootCmd.SetUsageFunc(rootUsageFunc)
 	rootCmd.MarkFlagRequired("flag")
 	rootCmd.MarkFlagDirname("flag")
 	rootCmd.MarkFlagFilename("flag")
@@ -44,6 +43,61 @@ var cmd = &cobra.Command{
 }
 ```
 
+## Limiting a flag to a set of options
+
+On the root command, if flag is persistent across all commands:
+
+```go
+const (
+	LogLevelInfo  = "info"
+	LogLevelWarn  = "warn"
+	LogLevelError = "error"
+	LogLevelDebug = "debug"
+)
+
+var (
+	ValidLogLevels = map[string]bool{
+		LogLevelInfo:  true,
+		LogLevelWarn:  true,
+		LogLevelError: true,
+		LogLevelDebug: true,
+	}
+)
+
+func init() {
+	// ...
+	logLevelHelp := fmt.Sprintf(
+		"log level: \"%s\", \"%s\", \"%s\", \"%s\"",
+		cfg.LogLevelInfo,
+		cfg.LogLevelWarn,
+		cfg.LogLevelError,
+		cfg.LogLevelDebug)
+	rootCmd.PersistentFlags().StringVarP(&logLevel, cLogLevelFlag, "l", config.LogLevel, logLevelHelp)
+	viper.BindPFlag(cNodeMode, nodeCmd.Flags().Lookup(cLogLevelFlag))
+	err := nodeCmd.RegisterFlagCompletionFunc(cLogLevelFlag,
+		func(cmd *cobra.Command, args []string, toComplete string) ([]string, cobra.ShellCompDirective) {
+			return []string{cfg.LogLevelInfo, cfg.LogLevelWarn, cfg.LogLevelError, cfg.LogLevelDebug}, cobra.ShellCompDirectiveNoFileComp
+		})
+	if err != nil {
+		log.Fatalf("Error registering flag completion function: %v", err)
+		os.Exit(1)
+	}
+	// ...
+}
+```
+
+On each command,  if flag is persistent across all commands:
+```go
+func runCommand(cmd *cobra.Command, args []string) {
+	// ...
+	if !cfg.ValidLogLevels[config.LogLevel] {
+		log.Fatalf("wrong log level: \"%s\"", config.LogLevel)
+		os.Exit(1)
+	}
+	// ...
+}
+```
+
 ## Single param
 
 ```go
@@ -69,7 +123,12 @@ func init() {
   rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.cobra.yaml)")
   rootCmd.PersistentFlags().StringVarP(&projectBase, "projectbase", "b", "", "base project directory eg. github.com/spf13/")
   rootCmd.PersistentFlags().StringP("author", "a", "YOUR NAME", "Author name for copyright attribution")
-  rootCmd.PersistentFlags().StringVarP(&userLicense, "license", "l", "", "Name of license for the project (can provide `licensetext` in config)")
+  rootCmd.PersistentFlags().StringVarP(
+	&userLicense, 
+	"license", 
+	"l", 
+	"", 
+	"Name of license for the project (can provide `licensetext` in config)")
   rootCmd.PersistentFlags().Bool("viper", true, "Use Viper for configuration")
   viper.BindPFlag("author", rootCmd.PersistentFlags().Lookup("author"))
   viper.BindPFlag("projectbase", rootCmd.PersistentFlags().Lookup("projectbase"))
@@ -143,6 +202,9 @@ func rootUsageFunc(cmd *cobra.Command) error {
 	}
 	if cmd.HasAvailableSubCommands() {
 		fmt.Printf("\n  %s [command]", cmd.CommandPath())
+		if cmd.HasAvailableFlags() {
+			fmt.Print(" [flags]")
+		}
 	}
 	if len(cmd.Aliases) > 0 {
 		fmt.Printf("\n\n\033[1mALIASES\033[0m\n")

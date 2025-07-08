@@ -1,4 +1,4 @@
-# Common syntax highlight
+# Common Syntax Highlight
 
 ## Bash
 \`\`\`bash  

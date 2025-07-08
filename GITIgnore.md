@@ -76,9 +76,6 @@ backup/
 # ====> Project
 /bin
 /research
-/cmd/nosogod/nosogod
-/cmd/nosogocli/nosogocli
-/target
 
 # ====> Go
 # Compiled Object files, Static and Dynamic libs (Shared Objects)

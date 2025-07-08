@@ -1,4 +1,6 @@
-# Packages
+# FPCUPDeluxe
+
+## Packages
 
 ```console
 $ sudo apt install \
@@ -19,6 +21,6 @@ $ sudo apt install \
 	libpango1.0-dev
 ```
 
-# Bootstrap compilers
+## Bootstrap compilers
 
 FPC 2.6.0: ftp://ftp.freepascal.org/pub/fpc/dist/2.6.0/bootstrap

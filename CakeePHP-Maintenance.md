@@ -1,4 +1,4 @@
-# Step-by-Step Guide to add Maintenance to `CakePHP`
+# Step-by-Step Guide to Add Maintenance to `CakePHP`
 
 ## Create a Maintenance Middleware
 Middleware in CakePHP can intercept requests and responses, making it perfect for implementing a maintenance mode.

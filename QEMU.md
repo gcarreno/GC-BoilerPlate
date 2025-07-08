@@ -1,12 +1,12 @@
 # QEMU
 
-# Check CPU
+## Check CPU
 
 ```console
 $ egrep -c '(vmx|svm)' /proc/cpuinfo
 ```
 
-# Installation
+## Installation
 
 ```console
 $ sudo apt install -y qemu-system virt-manager virtinst libvirt-clients bridge-utils libvirt-daemon-system
@@ -21,14 +21,14 @@ $ sudo apt install -y qemu-system virt-manager virtinst libvirt-clients bridge-u
 - **libvirt-daemon-system** – Provides configuration files needed to run the virtualization service.
 
 
-# Enabling and Starting `libvirtd`
+## Enabling and Starting `libvirtd`
 
 ```console
 $ sudo systemctl enable --now libvirtd
 $ sudo systemctl start libvirtd
 ```
 
-# Adding Users to `kvm` and `libvirt`
+## Adding Users to `kvm` and `libvirt`
 
 ```console
 $ sudo usermod -aG kvm $USER
@@ -37,7 +37,7 @@ $ sudo usermod -aG libvirt $USER
 
 After this we need a reboot, or a logout->login
 
-# Launching `virt-manager`
+## Launching `virt-manager`
 
 ```console
 $ sudo virt-manager

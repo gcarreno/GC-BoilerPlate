@@ -17,9 +17,17 @@ Some useful suggestions to add to build modes.
 
 Some useful stuff for Go.
 
+## Go-Pager.md
+
+Examples of console pagers.
+
 ## Cobra-Viper.md
 
 Some nice snippets for Go's `cobra` and `viper`.
+
+## Go-CLI-Colours
+
+A list of Go packages for `CLI` colour output.
 
 ## QEMU.md
 
