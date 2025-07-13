@@ -1,5 +1,37 @@
 # Code Snippets
 
+## Web
+
+### Meta
+
+This give data for the cards that show on Discord, Twitter, etc.. when posting a link.
+
+```html
+<title>Title of an article</title>
+
+<meta name="description" content="First Paragraph of an article" />
+
+<meta itemprop="name" content="Title of an article">
+<meta itemprop="description" content="First Paragraph of an article">
+<meta itemprop="datePublished" content="2025-07-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2025-07-12T00:00:00+00:00" />
+<meta itemprop="wordCount" content="2195">
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Title of an article"/>
+<meta name="twitter:description" content="First Paragraph of an article"/>
+
+
+<meta property="og:title" content="Title of an article" />
+<meta property="og:description" content="First Paragraph of an article" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="URL of an article" />
+<meta property="article:section" content="post" />
+<meta property="article:published_time" content="2025-07-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-07-12T00:00:00+00:00" />
+```
+
 ## FPC
 
 ### Time Difference
