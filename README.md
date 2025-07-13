@@ -80,3 +80,7 @@ Steps to add maintenance mode to `CakePHP`.
 ## MySQL.md
 
 Some useful commands for `MySQL`.
+
+## Miscellaneous.md
+
+Various bits of information that lack categorization.
