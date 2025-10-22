@@ -9,10 +9,12 @@ uses
 procedure InitShortCuts;
 begin
 {$IFDEF UNIX}
+  actFileExit.Caption:= '&Quit';
   actFileExit.ShortCut := KeyToShortCut(VK_Q, [ssCtrl]);
 {$ENDIF}
 {$IFDEF WINDOWS}
-  actFileExit.ShortCut := KeyToShortCut(VK_X, [ssAlt]);
+  actFileExit.Caption:= 'E&xit';
+  actFileExit.ShortCut := KeyToShortCut(VK_F4, [ssAlt]);
 {$ENDIF}
 end
 ```

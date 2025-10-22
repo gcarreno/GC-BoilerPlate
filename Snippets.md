@@ -32,6 +32,25 @@ This give data for the cards that show on Discord, Twitter, etc.. when posting a
 <meta property="article:modified_time" content="2025-07-12T00:00:00+00:00" />
 ```
 
+```html
+<meta property="twitter:card" content="summary_large_image"> <!-- https://regex101.com/preview/summary_large_image -->
+<meta property="twitter:site" content="@regex101">
+<meta property="twitter:title" content="regex101: build, test, and debug regex">
+<meta property="twitter:description" content="Regular expression tester with syntax highlighting, explanation, cheat sheet for PHP/PCRE, Python, GO, JavaScript, Java, C#/.NET, Rust.">
+<meta property="twitter:creator" content="@regex101">
+<meta property="twitter:image" content="https://regex101.com/preview/">
+<meta property="twitter:domain" content="regex101.com">
+
+<meta property="og:image" content="https://regex101.com/preview/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:title" content="regex101: build, test, and debug regex">
+<meta property="og:description" content="Regular expression tester with syntax highlighting, explanation, cheat sheet for PHP/PCRE, Python, GO, JavaScript, Java, C#/.NET, Rust.">
+<meta property="og:url" content="https://regex101.com/">
+<meta property="og:site_name" content="regex101">
+<meta property="og:type" content="website">
+```
+
 ## FPC
 
 ### Time Difference
