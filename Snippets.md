@@ -107,6 +107,12 @@ begin
 end;
 ```
 
+### Heap Trace
+
+```pas
+SetHeapTraceOutput('heap.log');
+```
+
 ## Lazarus
 
 ### `defines.inc`
